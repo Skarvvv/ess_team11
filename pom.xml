@@ -7,7 +7,11 @@
     <groupId>groupId</groupId>
     <artifactId>ess_team11</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <name>ssm02 Maven Webapp</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
