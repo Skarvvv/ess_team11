@@ -39,5 +39,19 @@
         <servlet-name>mvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <!-- 设置session过期时间 -->
+    <session-config>
+        <session-timeout>5</session-timeout>
+    </session-config>
+
+    <!--<filter>-->
+    <!--    <filter-name>timeOutFilter</filter-name>-->
+    <!--    <filter-class>com.team11.filter.TimeOutFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--    <filter-name>timeOutFilter</filter-name>-->
+    <!--    <url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
     
 </web-app>
