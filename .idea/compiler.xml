@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ess_team11" target="1.7" />
+      <module name="ess_team11" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>

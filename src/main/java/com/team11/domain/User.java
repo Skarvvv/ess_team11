@@ -1,8 +1,9 @@
 package com.team11.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
 
     private Integer uid;
     private String uname;

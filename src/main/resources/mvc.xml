@@ -27,4 +27,17 @@
     <!-- 使框架能够处理静态资源 -->
     <mvc:default-servlet-handler />
 
+    <!--重要！将你的SwaggerConfig配置类注入-->
+    <bean class="com.team11.config.SwaggerConfig"/>
+    <!--重要！配置swagger资源不被拦截-->
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.team11.interceptor.CrossOriginIntercept"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

@@ -31,4 +31,9 @@ public class TimeOutFilter extends HttpFilter {
 
 
     }
+
+    @Override
+    public void destroy() {
+
+    }
 }
