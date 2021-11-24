@@ -16,7 +16,7 @@ public interface UserDao {
     @Insert("INSERT INTO T_USER VALUES(null,#{uname},#{upass},#{utel},#{email},#{photo},#{sex},#{ptype},#{pnumber},#{birthday},#{country},#{y11},#{y12},#{y13},#{y14},1)")
     int insertOne(User user);
 
-    @Update("UPDATE T_USER SET UNAME=#{uname},UPASS=#{upass},UTEL=#{utel},EMAIL=#{email},#{photo},#{sex},#{ptype},#{pnumber},#{birthday},#{country},#{y11},#{y12},#{y13},#{y14}")
+    @Update("UPDATE T_USER SET UNAME=#{uname},UPASS=#{upass},UTEL=#{utel},EMAIL=#{email},#{photo},#{sex},#{ptype},#{pnumber},#{birthday},#{country},#{y11},#{y12},#{y13},#{y14} WHERE UID=#{uid}")
     int update(User user);
 
 }

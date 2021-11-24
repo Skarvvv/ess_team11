@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private UserDao dao;
+    private UserDao userDao;
 
     public UserVO selectOne(String account){
-        User user = dao.selectOne(account);
+        User user = userDao.selectOne(account);
         UserVO vo = new UserVO();
         if (user != null) {
             BeanUtils.copyProperties(user, vo);
@@ -30,15 +30,15 @@ public class UserService {
 
     public int register(User user){
         try {
-            return dao.insertOne(user);
+            return userDao.insertOne(user);
         }catch (Exception e){
             e.printStackTrace();
             return 0;
         }
     }
 
-//    public int messageUpdate(User user){
-//
-//    }
+    public int messageUpdate(User user){
+        return userDao.update(user);
+    }
 
 }

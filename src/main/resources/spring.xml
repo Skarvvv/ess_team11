@@ -49,4 +49,16 @@
     />
     <tx:annotation-driven transaction-manager="manager" />
 
+    <!-- 配置String-Date自定义转换器 -->
+    <!-- 加载一个自定义类型转换器 -->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.team11.util.StringToDateConverter" />
+            </set>
+        </property>
+    </bean>
+    <!-- 需要手动配置这个类的驱动 -->
+    <mvc:annotation-driven conversion-service="conversionService" />
+
 </beans>
